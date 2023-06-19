@@ -16,7 +16,7 @@ fun NavGraphBuilder.authNavGraph(navHostController: NavHostController) {
         composable(route = AuthScreen.SignIn.route) {
             SignInScreen(
                 onSignInClick = {
-                    //navHostController.popBackStack()
+                    navHostController.popBackStack()
                     navHostController.navigate(Graph.BOTTOM)
                 },
                 onSignUpClick = {

@@ -22,7 +22,9 @@ fun BottomNavGraph(navHostController: NavHostController) {
         startDestination = BottomBarScreens.Main.route
     ){
         composable(route = BottomBarScreens.Main.route){
-            MainChartScreen(navHostController)
+            MainChartScreen( onOperationsClick = {
+                navHostController.navigate(Graph.MAIN)
+            })
         }
         composable(route = BottomBarScreens.Wallet.route){
             WalletsScreen()
